@@ -8,7 +8,7 @@
     pincel.fillStyle = 'grey';
     pincel.fillRect(0, 0, 600, 400);
 
-    function exibeAlerta(evento) {
+    function exibeCirculo(evento) {
 
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
@@ -20,6 +20,6 @@
         console.log(x + ',' + y);
     }
 
-    tela.onclick = exibeAlerta;
+    tela.onclick = exibeCirculo;
 
 </script>
