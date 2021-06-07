@@ -24,13 +24,33 @@
     }
 
 
-    function desenhaAlvo()  {
+    function desenhaAlvo(x, y)  {
 
-    desenhaCirculo(100, 100, raio+20, 'red');
-    desenhaCirculo(100, 100, raio+10, 'white');
-    desenhaCirculo(100, 100, raio, 'red');
+    desenhaCirculo(x, y, raio+20, 'red');
+    desenhaCirculo(x, y, raio+10, 'white');
+    desenhaCirculo(x, y, raio, 'red');
 
     }
+
+    function sorteiaPosicao (maximo) {
+
+        return Math.floor(Math.random() * maximo);
+
+
+    }
+
+    function atualizaTela() {
+        limpaTela();
+        var xAleatorio = sorteiaPosicao(600);
+        var yAleatorio = sorteiaPosicao(400);
+
+
+            desenhaAlvo(xAleatorio, yAleatorio);
+    }
+
+    setInterval(atualizaTela, 1000)
+
+    
     
     
     </script> 
